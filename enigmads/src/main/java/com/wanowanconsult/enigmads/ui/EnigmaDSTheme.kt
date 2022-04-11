@@ -7,9 +7,9 @@ import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 
 @Composable
-fun DlsTheme(
-    colors: EnigmaColorPalette = enigmaLightColorPalette(),
-    typography: EnigmaTypography = EnigmaTypography(),
+fun EnigmaDSTheme(
+    colors: EnigmaDSColorPalette = enigmaDSLightColorPalette(),
+    typography: EnigmaDSTypography = EnigmaDSTypography(),
     children: @Composable() () -> Unit
 ) {
     CompositionLocalProvider(
@@ -25,22 +25,22 @@ fun DlsTheme(
     }
 }
 
-object EnigmaTheme {
-    val colors: EnigmaColorPalette
+object EnigmaDSTheme {
+    val colors: EnigmaDSColorPalette
         @Composable
         @ReadOnlyComposable
         get() = LocalEnigmaColors.current
 
-    val typography: EnigmaTypography
+    val typography: EnigmaDSTypography
         @Composable
         @ReadOnlyComposable
         get() = LocalEnigmaTypography.current
 
-    val sizes: EnigmaSize
+    val sizes: EnigmaDSSize
         @Composable
         @ReadOnlyComposable
-        get() = EnigmaSize()
+        get() = EnigmaDSSize()
 }
 
-internal val LocalEnigmaColors = staticCompositionLocalOf { enigmaLightColorPalette() }
-internal val LocalEnigmaTypography = staticCompositionLocalOf { EnigmaTypography() }
+internal val LocalEnigmaColors = staticCompositionLocalOf { enigmaDSLightColorPalette() }
+internal val LocalEnigmaTypography = staticCompositionLocalOf { EnigmaDSTypography() }

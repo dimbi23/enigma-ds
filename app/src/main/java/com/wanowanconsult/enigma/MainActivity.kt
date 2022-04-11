@@ -11,16 +11,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.wanowanconsult.enigma.ui.theme.EnigmaTheme
+import com.wanowanconsult.enigmads.components.PrimaryButton
+import com.wanowanconsult.enigmads.ui.EnigmaDSTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            EnigmaTheme {
-                // A surface container using the 'background' color from the theme
+            EnigmaDSTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
+                    color = EnigmaDSTheme.colors.background
                 ) {
                     Greeting("Android")
                 }
@@ -39,5 +40,9 @@ fun Greeting(name: String) {
 fun DefaultPreview() {
     EnigmaTheme {
         Greeting("Android")
+        PrimaryButton(
+            text = "Hello",
+            onClick = {}
+        )
     }
 }

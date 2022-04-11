@@ -7,7 +7,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.material.Typography
 
 @Immutable
-data class EnigmaTypography internal constructor(
+data class EnigmaDSTypography internal constructor(
     val headline1: TextStyle = TextStyle(
         fontSize = 36.sp,
         fontWeight = FontWeight.Bold,
